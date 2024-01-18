@@ -22,10 +22,17 @@ const PackageCreator = () => {
         {/* Use the ImageUploader component */}
         <ImageUploader setSelectedImage={setSelectedImage} />
 
-        <div style={{ display: 'flex', marginTop: '10px' }}>
-          <button>Package</button>
-          <button>Pricing</button>
-          <button>Discount</button>
+        <div style={{ display: 'flex', marginTop: '10px' }} className='space-x-4'>
+        
+          <button class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-gray-900 rounded-lg hover:bg-gray-800 focus:shadow-outline focus:outline-none">
+Button Text
+</button>
+<button class="inline-flex items-center justify-center h-12 px-6 space-x-2 font-medium  text-gray-900 border-2 border-gray-600  rounded-lg">
+Button Text
+</button>
+<button class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-gray-900 rounded-lg hover:bg-gray-800 focus:shadow-outline focus:outline-none">
+Button Text
+</button>
         </div>
 
         <input
@@ -55,10 +62,32 @@ const PackageCreator = () => {
           <div className="created-package">
             <h2>Created Package:</h2>
             {/* Display the selected image */}
-            {selectedImage && <img src={URL.createObjectURL(selectedImage)} alt="Uploaded" />}
-            <p>Title: {packageTitle}</p>
-            <p>Details: {packageDetails}</p>
-            <p>Benefits: {benefits}</p>
+            {/* {selectedImage && <img src={URL.createObjectURL(selectedImage)} alt="Uploaded" />} */}
+            <>
+  {/* component */}
+  <div className="flex flex-row h-screen">
+      <div className="w-full max-w-xs   bg-white">
+        <img
+        width="115" height="140"
+          src={URL.createObjectURL(selectedImage)}
+          alt="tailwind logo"
+          className="rounded-xl"
+        />
+      </div>
+      <div className="w-full bg-white flex flex-col space-y-2 p-3">
+        
+        <h3 className="font-black text-gray-800 md:text-3xl text-xl">
+        Title: {packageTitle}    </h3>
+        <h3 className="font-black text-gray-800 md:text-3xl text-xl">
+        Details: {packageDetails}      </h3>
+        <h3 className="font-black text-gray-800 md:text-3xl text-xl">
+        Benefits: {benefits}        </h3>
+        
+      </div>
+    </div>
+
+</>
+
           </div>
         )}
       </div>

@@ -20,12 +20,12 @@ const ImageUploader = ({ setSelectedImage }) => {
     //   )}
     // </div>
 <>
-  {/* component */}
+  
   <link
     rel="stylesheet"
     href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css"
   />
-  {/* This is an example component */}
+  
   <div className="max-w-2xl mx-auto">
     <div className="flex items-center justify-center w-full">
       <label

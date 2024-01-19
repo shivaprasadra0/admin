@@ -61,10 +61,7 @@ Button Text
         {packageCreated && (
           <div className="created-package">
             <h2>Created Package:</h2>
-            {/* Display the selected image */}
-            {/* {selectedImage && <img src={URL.createObjectURL(selectedImage)} alt="Uploaded" />} */}
-            <>
-  {/* component */}
+            
   <div className="flex flex-row h-screen">
       <div className="w-full max-w-xs   bg-white">
         <img
